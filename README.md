@@ -1,0 +1,1 @@
+# bmw-ki-studies
