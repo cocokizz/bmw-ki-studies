@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW: Big Data & KI Studien</title>
+  <!-- Tailwind CSS CDN (remove if you use your own build) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="bg-white shadow sticky top-0 z-10">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-4">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-xl text-sky-700">BMW KI-Studien</span>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#ueberblick" class="nav-link">Überblick</a>
+        <a href="#bigdata" class="nav-link">Big Data @ BMW</a>
+        <a href="#oekosystem" class="nav-link">Daten-Ökosystem</a>
+        <a href="#anwendungen" class="nav-link">Anwendungen</a>
+        <a href="#wettbewerb" class="nav-link">Wettbewerb</a>
+        <a href="#ethik" class="nav-link">Ethik & Zukunft</a>
+      </div>
+      <button id="menuButton" class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden flex-col bg-white px-4 pb-4">
+      <a href="#ueberblick" class="nav-link py-2 block">Überblick</a>
+      <a href="#bigdata" class="nav-link py-2 block">Big Data @ BMW</a>
+      <a href="#oekosystem" class="nav-link py-2 block">Daten-Ökosystem</a>
+      <a href="#anwendungen" class="nav-link py-2 block">Anwendungen</a>
+      <a href="#wettbewerb" class="nav-link py-2 block">Wettbewerb</a>
+      <a href="#ethik" class="nav-link py-2 block">Ethik & Zukunft</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Überblick Section -->
+    <section id="ueberblick" class="mb-12">
+      <h2 class="text-2xl font-bold mb-2">Überblick</h2>
+      <p class="mb-4">Die BMW Group positioniert sich als führendes Unternehmen in der datengesteuerten Innovation innerhalb der Automobilindustrie ...</p>
+    </section>
+
+    <!-- Big Data Section -->
+    <section id="bigdata" class="mb-12">
+      <h2 class="text-2xl font-bold mb-2">Big Data @ BMW (4V's)</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold">Volume</h3>
+          <canvas id="volumeChart" class="w-full max-w-sm mx-auto"></canvas>
+        </div>
+        <div>
+          <h3 class="font-semibold">Variety</h3>
+          <ul class="list-disc ml-6">
+            <li>Sensordaten</li>
+            <li>Fahrzeugdaten</li>
+            <li>Kundendaten</li>
+            <li>u.v.m.</li>
+          </ul>
+        </div>
+        <!-- Add more 'V's as needed -->
+      </div>
+    </section>
+
+    <!-- Daten-Ökosystem Section -->
+    <section id="oekosystem" class="mb-12">
+      <h2 class="text-2xl font-bold mb-2">Daten-Ökosystem</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <button class="accordion font-semibold w-full text-left">Interne Quellen</button>
+          <ul class="accordion-content hidden list-disc ml-6">
+            <li>Produktionsdaten</li>
+            <li>Fahrzeugdaten</li>
+            <li>CRM</li>
+            <li>SAP</li>
+            <li>...</li>
+          </ul>
+        </div>
+        <div>
+          <button class="accordion font-semibold w-full text-left">Externe Quellen</button>
+          <ul class="accordion-content hidden list-disc ml-6">
+            <li>Partner</li>
+            <li>Zulieferer</li>
+            <li>IoT-Plattformen</li>
+            <li>Open Data</li>
+            <li>...</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anwendungen Section -->
+    <section id="anwendungen" class="mb-12">
+      <h2 class="text-2xl font-bold mb-2">Anwendungen & Innovation</h2>
+      <div id="applicationsGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <button class="tab-button px-4 py-2 rounded bg-gray-200 active">Alle</button>
+        <button class="tab-button px-4 py-2 rounded bg-gray-200">Produktion</button>
+        <button class="tab-button px-4 py-2 rounded bg-gray-200">Fahrzeug</button>
+        <!-- More filter buttons as needed -->
+      </div>
+    </section>
+
+    <!-- Wettbewerb Section -->
+    <section id="wettbewerb" class="mb-12">
+      <h2 class="text-2xl font-bold mb-2">Wettbewerb</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white shadow-sm">
+          <thead>
+            <tr>
+              <th class="px-4 py-2">Unternehmen</th>
+              <th class="px-4 py-2">KI-Anwendung</th>
+              <th class="px-4 py-2">Vorteil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-2">BMW</td>
+              <td class="border px-4 py-2">Predictive Maintenance</td>
+              <td class="border px-4 py-2">Weniger Ausfälle</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Ethik & Zukunft Section -->
+    <section id="ethik" class="mb-12">
+      <h2 class="text-2xl font-bold mb-2">Ethik & Zukunft</h2>
+      <div>
+        <button class="accordion font-semibold w-full text-left">Datenschutz & Sicherheit</button>
+        <ul class="accordion-content hidden list-disc ml-6">
+          <li>Datensicherheit</li>
+          <li>Transparenz</li>
+          <li>...</li>
+        </ul>
+        <!-- Add more accordions as needed -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white py-4 text-center text-gray-500">
+    &copy; <span id="currentYear"></span> BMW KI-Studien
+  </footer>
+
+  <!-- JS for interactions and Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuButton').addEventListener('click', function () {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Accordion toggle
+    document.querySelectorAll('.accordion').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.classList.toggle('hidden');
+      });
+    });
+
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Chart.js example (Volume)
+    const ctx = document.getElementById('volumeChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Sensor', 'Fahrzeug', 'Kunde', 'Andere'],
+        datasets: [{
+          label: 'Datensätze (Mio.)',
+          data: [120, 90, 60, 30],
+          backgroundColor: [
+            'rgba(59, 130, 246, 0.7)',
+            'rgba(34, 197, 94, 0.7)',
+            'rgba(239, 68, 68, 0.7)',
+            'rgba(249, 115, 22, 0.7)'
+          ],
+          borderColor: [
+            'rgba(59, 130, 246, 1)',
+            'rgba(34, 197, 94, 1)',
+            'rgba(239, 68, 68, 1)',
+            'rgba(249, 115, 22, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    // Tab filtering for applications
+    const applicationsData = [
+      // Fill with your data objects, e.g. {category: 'Produktion', icon: '🔧', title: 'Titel', desc: 'Beschreibung'}
+    ];
+    const applicationsGrid = document.getElementById('applicationsGrid');
+    const tabButtons = document.querySelectorAll('.tab-button');
+    function displayApplications(filter = 'Alle') {
+      applicationsGrid.innerHTML = '';
+      const filtered = filter === 'Alle' ? applicationsData : applicationsData.filter(a => a.category === filter);
+      filtered.forEach(app => {
+        const card = document.createElement('div');
+        card.className = 'card bg-white rounded shadow p-4 flex flex-col';
+        card.innerHTML = `<div class="flex items-center mb-3">
+            <span class="text-3xl mr-3">${app.icon || ''}</span>
+            <h4 class="text-lg font-semibold text-sky-600">${app.title || ''}</h4>
+          </div>
+          <p class="text-sm text-slate-600 flex-grow">${app.desc || ''}</p>`;
+        applicationsGrid.appendChild(card);
+      });
+    }
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active', 'bg-sky-200'));
+        btn.classList.add('active', 'bg-sky-200');
+        displayApplications(btn.textContent.trim());
+      });
+    });
+    displayApplications();
+  </script>
+</body>
+</html>
